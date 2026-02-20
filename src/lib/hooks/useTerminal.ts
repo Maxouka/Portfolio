@@ -55,7 +55,7 @@ export function useTerminal() {
       }
       if (result.action === "download") {
         const a = document.createElement("a");
-        a.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/resume.pdf`;
+        a.href = "/resume.pdf";
         a.download = "resume.pdf";
         a.click();
       }

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { profile } from "@/lib/data/profile";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 /* ── Scroll-reveal wrapper ── */
 function Reveal({
@@ -119,7 +118,7 @@ export default function ClassicPage() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${basePath}/moicv.png`}
+              src={`/moicv.png`}
               alt={profile.name}
               className="w-full h-full object-cover"
             />
@@ -141,7 +140,7 @@ export default function ClassicPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href={`${basePath}/resume.pdf`}
+                href={`/resume.pdf`}
                 download
                 className="px-6 py-3 bg-[#7c3aed] text-white text-sm rounded-lg font-medium hover:bg-[#6d28d9] transition-colors"
               >
@@ -357,7 +356,7 @@ export default function ClassicPage() {
 
           <Reveal delay={0.15}>
             <a
-              href={`${basePath}/resume.pdf`}
+              href={`/resume.pdf`}
               download
               className="inline-block px-8 py-3 bg-[#7c3aed] text-white text-sm rounded-lg font-medium hover:bg-[#6d28d9] transition-colors"
             >

@@ -209,7 +209,7 @@ export function TerminalEmulator() {
                     <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-terminal-green/50 shadow-lg shadow-terminal-green/10 shrink-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/moicv.png`}
+                        src="/moicv.png"
                         alt="Maxime LAUNOY"
                         className="w-full h-full object-cover"
                       />
@@ -225,7 +225,7 @@ export function TerminalEmulator() {
                     <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-terminal-green/50 shadow-lg shadow-terminal-green/10">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/moicv.png`}
+                        src="/moicv.png"
                         alt="Maxime LAUNOY"
                         className="w-full h-full object-cover"
                       />

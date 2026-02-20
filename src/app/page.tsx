@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Home() {
   const [hovered, setHovered] = useState<"terminal" | "classic" | null>(null);
@@ -108,7 +107,7 @@ export default function Home() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`${basePath}/moicv.png`}
+            src={`/moicv.png`}
             alt="Maxime LAUNOY"
             className="w-24 h-24 rounded-full object-cover border-2 border-gray-200 mx-auto mb-8 shadow-lg"
           />
