@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a1a;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+  --accent-primary: #a855f7;
+  --accent-secondary: #7c3aed;
+  --accent-blue: #3b82f6;
+  --terminal-green: #22c55e;
+  --error-red: #ef4444;
+  --warning-yellow: #f59e0b;
+  --card-bg: #111827;
+  --card-border: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-blue: var(--accent-blue);
+  --color-terminal-green: var(--terminal-green);
+  --color-error-red: var(--error-red);
+  --color-warning-yellow: var(--warning-yellow);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scan line */
+@keyframes scan-line {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+/* Glitch text */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-color {
+  0% { text-shadow: 2px 0 #a855f7, -2px 0 #22c55e; }
+  25% { text-shadow: -2px 0 #a855f7, 2px 0 #22c55e; }
+  50% { text-shadow: 2px 2px #a855f7, -2px -2px #22c55e; }
+  75% { text-shadow: -2px 2px #a855f7, 2px -2px #22c55e; }
+  100% { text-shadow: 2px 0 #a855f7, -2px 0 #22c55e; }
+}
+
+.glitch-active {
+  animation: glitch 0.3s infinite, glitch-color 0.3s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
+}
+
+/* Landing page scan line */
+@keyframes scan-move {
+  0% { top: -60px; }
+  100% { top: 100%; }
+}
+.animate-scan {
+  animation: scan-move 4s linear infinite;
+}
