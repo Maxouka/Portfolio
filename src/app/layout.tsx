@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: "Maxime LAUNOY — Portfolio Terminal",
   description: "Portfolio interactif sous forme de terminal. Ingenieur INSA, cybersecurity & fullstack developer.",
   keywords: ["portfolio", "cybersecurity", "fullstack", "developer", "terminal", "Maxime LAUNOY"],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({
