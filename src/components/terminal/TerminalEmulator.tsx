@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTerminal } from "@/lib/hooks/useTerminal";
 import type { TerminalLine } from "@/lib/hooks/useTerminal";
@@ -123,6 +124,7 @@ export function TerminalEmulator() {
     glitchActive,
   } = useTerminal();
 
+  const router = useRouter();
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -179,7 +181,11 @@ export function TerminalEmulator() {
       {/* Header */}
       <div className="flex items-center gap-3 px-4 py-2.5 bg-card-bg border-b border-card-border shrink-0">
         <div className="flex items-center gap-1.5">
-          <div className="w-3 h-3 rounded-full bg-error-red/80" />
+          <button
+            onClick={(e) => { e.stopPropagation(); router.push("/"); }}
+            className="w-3 h-3 rounded-full bg-error-red/80 hover:bg-error-red transition-colors cursor-pointer"
+            title="Retour à l'accueil"
+          />
           <div className="w-3 h-3 rounded-full bg-warning-yellow/80" />
           <div className="w-3 h-3 rounded-full bg-terminal-green/80" />
         </div>
