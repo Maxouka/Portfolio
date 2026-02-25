@@ -40,7 +40,7 @@ export const profile = {
 
   experiences: [
     {
-      period: "2024 - 2025",
+      period: "2024",
       title: "Ingenieur Cybersecurite — Harvest (Fintech), Paris",
       duration: "1 an",
       context:
@@ -55,7 +55,7 @@ export const profile = {
       ],
     },
     {
-      period: "2024",
+      period: "2023",
       title: "Ingenieur d'Exploitation (Stage) — Harvest, Sophia-Antipolis",
       duration: "4 mois",
       details: [
@@ -64,7 +64,7 @@ export const profile = {
       ],
     },
     {
-      period: "2026",
+      period: "2025",
       title: "Lead Dev (Projet personnel) — trouverunprof.com",
       duration: "Projet en cours",
       details: [
